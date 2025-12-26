@@ -1,25 +1,18 @@
-const startBtn = document.getElementById("startBtn");
-const start = document.getElementById("start");
-const scene = document.getElementById("scene");
-const orbit = document.getElementById("orbit");
+document.addEventListener("DOMContentLoaded", () => {
+  // Elementos principales
+  const start = document.getElementById("start");
+  const startBtn = document.getElementById("startBtn");
+  const scene = document.getElementById("scene");
 
-startBtn.onclick = () => {
-  start.classList.add("hidden");
-  scene.classList.remove("hidden");
-  loadData();
-};
+  // Verificación básica (evita pantalla negra silenciosa)
+  if (!start || !startBtn || !scene) {
+    console.error("Error: faltan elementos en el HTML");
+    return;
+  }
 
-function loadData() {
-  fetch("data.json")
-    .then(res => res.json())
-    .then(data => {
-      data.texts.forEach((text, i) => {
-        const el = document.createElement("div");
-        el.className = "orbit-item";
-        el.innerText = text;
-        el.style.top = `${50 + Math.sin(i) * 120}%`;
-        el.style.left = `${50 + Math.cos(i) * 120}%`;
-        orbit.appendChild(el);
-      });
-    });
-}
+  // Acción al tocar el corazón
+  startBtn.addEventListener("click", () => {
+    start.classList.add("hidden");
+    scene.classList.remove("hidden");
+  });
+});
