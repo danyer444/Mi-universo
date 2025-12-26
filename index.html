@@ -2,33 +2,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Universo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<div id="start">
-  <div id="startBtn">
+  <!-- PANTALLA INICIAL -->
+  <div id="start">
+    <div id="startBtn">
+      <div class="heart-container">
+        <div class="heart"></div>
+        <div class="ring"></div>
+      </div>
+      <p>toca aquí</p>
+    </div>
+  </div>
+
+  <!-- ESCENA PRINCIPAL -->
+  <div id="scene" class="hidden">
+    <div class="stars"></div>
+
     <div class="heart-container">
       <div class="heart"></div>
       <div class="ring"></div>
     </div>
-    <p>toca aquí</p>
-  </div>
-</div>
 
-<div id="scene" class="hidden">
-  <div class="stars"></div>
-
-  <div class="heart-container">
-    <div class="heart"></div>
-    <div class="ring"></div>
+    <div id="orbit"></div>
   </div>
 
-  <div id="orbit"></div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
