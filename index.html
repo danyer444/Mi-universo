@@ -4,35 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Universo</title>
+
+  <!-- ESTILOS -->
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* respaldo mínimo por si el CSS tarda */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- PANTALLA INICIAL -->
-  <div id="start">
-    <div id="startBtn">
-      <div class="heart-container">
-        <div class="heart"></div>
-        <div class="ring"></div>
-      </div>
-      <p>toca aquí</p>
-    </div>
-  </div>
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Mi Universo</h1>
+    <button id="loginBtn">Editar</button>
+  </header>
 
-  <!-- ESCENA PRINCIPAL -->
-  <div id="scene" class="hidden">
-    <div class="stars"></div>
+  <!-- SUBIDA (solo creador) -->
+  <section id="uploadSection" class="upload" style="display:none;">
+    <input
+      id="uploadInput"
+      type="file"
+      accept="image/*"
+      multiple
+    />
+    <p>Puedes subir fotos desde tu iPhone</p>
+  </section>
 
-    <div class="heart-container">
-      <div class="heart"></div>
-      <div class="ring"></div>
-    </div>
+  <!-- GALERÍA -->
+  <main id="gallery" class="gallery">
+    <!-- fotos dinámicas -->
+  </main>
 
-    <div id="orbit"></div>
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© Mi Universo</p>
+  </footer>
 
+  <!-- SCRIPT (SIEMPRE AL FINAL) -->
   <script src="script.js"></script>
+
 </body>
 </html>
 
