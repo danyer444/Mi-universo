@@ -16,3 +16,4 @@ document.addEventListener("DOMContentLoaded", () => {
     scene.classList.remove("hidden");
   });
 });
+
